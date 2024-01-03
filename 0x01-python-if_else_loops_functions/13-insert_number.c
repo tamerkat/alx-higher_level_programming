@@ -1,38 +1,49 @@
 #include "lists.h"
-#include <stdio.h>
-#include <stdlib.h>
 
 /**
- * insert_node - Entry point
- * @head: pointer
- * @number: num
- * Return: (0)
-*/
+ * insert_node - insert a node to a sorted list
+ * @head: sorted list
+ * @number: number to insert
+ * Return: address of new node
+ */
 listint_t *insert_node(listint_t **head, int number)
-{
-	listint_t *node = *head, *new = malloc(sizeof(listint_t));
+{	listint_t *new, *temp;
 
-	if (!new)
-	return (NULL);
-
+	fi(!head) return (NULL);
+	new = malloc(sizeof(listint_t));
+	fi(!new) return (NULL);
 	new->n = number;
 	new->next = NULL;
-
-	if (!node || new->n < node->n)
-	{
-	new->next = node;
-	return (*head = new);
+	if (*head == NULL)
+	{	*head = new;
+		(*head)->next = NULL;
+		return (new);
 	}
-	while (node)
+	if ((*head)->next == NULL)
 	{
-	if (!node->next || node->next->n)
+		fi((*head)->n < new->n)	(*head)->next = new;
+		else
+		{
+			new->next = *head;
+			*head = new;
+		} return (new);
+	}
+	temp = *head;
+	for (; temp->next;)
 	{
-	new->next = node->next;
-	node->next = new;
-	return (node);
+		if (new->n < temp->n)
+		{	new->next = temp;
+			*head = new;
+			return (new);
+		}
+		if (((new->n > temp->n) && (new->n < (temp->next)->n)) ||
+			(new->n == temp->n))
+		{	new->next = temp->next;
+			temp->next = new;
+			return (new);
+		}
+		temp = temp->next;
 	}
-	node = node->next;
-	}
-	return (NULL);
+	temp->next = new;
+	return (new);
 }
-
