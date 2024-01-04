@@ -8,8 +8,9 @@ if __name__ == "__main__":
         print("0 arguments.")
     elif count == 1:
         print("1 arguments:")
+        for j in ar:
+            print(f"{x}: {j}")
     else:
         print(f"{len(ar)} arguments")
         for i in ar:
-            print(f"{x}: {i}")
             x += 1
