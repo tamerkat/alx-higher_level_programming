@@ -12,7 +12,7 @@ if __name__ == '__main__':
         print("{} + {} = {}".format(a, b, add(a, b)))
         exit(0)
     elif oberation == "-":
-        print("{} - {} + {}".format(a, b, sub(a, b)))
+        print("{} - {} = {}".format(a, b, sub(a, b)))
         exit(0)
     elif oberation == "*":
         print("{} * {} = {}".format(a, b, mul(a, b)))
