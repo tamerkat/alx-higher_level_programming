@@ -13,4 +13,5 @@ if __name__ == "__main__":
     else:
         print(f"{len(ar)} arguments")
         for i in ar:
+            print(f"{x}: {i}")
             x += 1
