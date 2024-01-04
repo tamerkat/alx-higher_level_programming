@@ -1,3 +1,2 @@
 #!/usr/bin/python3
-import sys
-sys.stderr.write("#pythoniscool")
+import easy_print
