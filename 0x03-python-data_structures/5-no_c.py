@@ -1,7 +1,4 @@
 #!/usr/bin/env python3
 def no_c(my_string):
-    cop = ""
-    for i in range(len(my_string)):
-        if (my_string[i] != "c" and my_string[i] != "C"):
-            cop += my_string[i]
+    cop = ''.join(char for char in my_string if char not in ('c', 'C'))
     return cop
