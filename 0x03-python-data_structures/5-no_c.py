@@ -1,7 +1,7 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 def no_c(my_string):
-    cop = f""
+    s = f""
     for i in my_string:
-        if i != "c" and i != "C":
-            cop += f"{i}"
-    return cop
+        if i != 'c' and i != 'C':
+            s += f"{i}"
+    return s
