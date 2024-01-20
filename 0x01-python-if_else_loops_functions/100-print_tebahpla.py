@@ -1,3 +1,6 @@
 #!/usr/bin/python3
-output = ''.join(chr(i).lower() if i % 2 == 0 else chr(i).upper() for i in range(122, 64, -1))
-print("{}".format(output) end='')
+for i in range(25, -1, -1):
+    c = i + ord('A')
+    if i % 2 == 1:
+        c += 32
+    print("{:c}".format(c), end='')
