@@ -1,6 +1,3 @@
 #!/usr/bin/python3
-for i in range(97, 123, -1):
-    if i % 2 == 0:
-        print(chr(i).lower(), end='')
-    else:
-        print(chr(i).upper(), end='')
+output = ''.join(chr(i).lower() if i % 2 == 0 else chr(i).upper() for i in range(122, 64, -1))
+print(output, end='')
