@@ -10,5 +10,5 @@ class Square:
             size = int(size)
         except TypeError:
             print("size must be an integer")
-        except ValueError:
+        if size < 0:
             print("size must be >= 0")
