@@ -1,8 +1,11 @@
 #!/usr/bin/python3
-"""this is commit"""
+"""
+
+Reads and prints contents from file
+"""
 
 
 def read_file(filename=""):
-    """ define"""
-    with open(filename, mode='r', encoding='utf-8') as f:
-        print(f.read(), end"")
+    """Read and print text from file"""
+    with open(filename, mode="r", encoding="utf-8") as f:
+        print(f.read(), end="")
