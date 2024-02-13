@@ -1,5 +1,10 @@
 #!/usr/bin/python3
+"""define moduls"""
+
+
 from models.base import Base
+
+
 class Rectangle(Base):
     def __init__(self, width, height, x=0, y=0, id=None):
         super().__init__(id)
@@ -7,7 +12,7 @@ class Rectangle(Base):
         self.height = height
         self.x = x
         self.y = y
-        
+
     @property
     def width(self):
         return self.__width
@@ -16,10 +21,11 @@ class Rectangle(Base):
     def width(self, value):
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
-        if self.__width <= 0:
+        elif value <= 0:
             raise ValueError("width must be > 0")
-        self.__width = value
-    
+        else:
+            self.__width = value
+
     @property
     def height(self):
         return self.__height
@@ -28,10 +34,11 @@ class Rectangle(Base):
     def height(self, value):
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
-        if self.__height <= 0:
+        elif value <= 0:
             raise ValueError("height must be > 0")
-        self.__height = value
-    
+        else:
+            self.__height = value
+
     @property
     def x(self):
         return self.__x
@@ -40,10 +47,11 @@ class Rectangle(Base):
     def x(self, value):
         if not isinstance(value, int):
             raise TypeError("x must be an integer")
-        if self.__x < 0:
+        elif value < 0:
             raise ValueError("x must be >= 0")
-        self.__x = value
-    
+        else:
+            self.__x = value
+
     @property
     def y(self):
         return self.__y
@@ -52,6 +60,7 @@ class Rectangle(Base):
     def y(self, value):
         if not isinstance(value, int):
             raise TypeError("y must be an integer")
-        if self.__y < 0:
+        elif value < 0:
             raise ValueError("y must be >= 0")
-        self.__y = value
+        else:
+            self.__y = value
