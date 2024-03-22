@@ -1,3 +1,3 @@
 -- list data
 
-SHOW TABLE
+SHOW tables;
