@@ -1,3 +1,3 @@
 -- list data
 
-SELECT * FROM mysql;
+SHOW TABLE
