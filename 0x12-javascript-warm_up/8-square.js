@@ -6,5 +6,7 @@ if (isNaN(ar)) {
 }
 
 for (let i = 0; i < ar; i++) {
-  console.log('x' * ar);
+  for (let j = 0; j < i; j++) {
+    console.log('x');
+  }
 }
