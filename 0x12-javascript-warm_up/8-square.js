@@ -5,6 +5,6 @@ if (isNaN(ar)) {
   console.log('Missing size');
 } else {
   for (let i = 0; i < ar; i++) {
-    console.log('X'.repeat(ar));
+    console.log('X' * ar);
   }
 }
