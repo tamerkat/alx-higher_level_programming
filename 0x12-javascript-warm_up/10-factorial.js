@@ -7,5 +7,6 @@ if (!process.argv[2]) {
       console.log(x * (x - 1));
     }
   }
-  factorial(process.argv[2]);
+  const num = +process.argv[2];
+  factorial(num);
 }
