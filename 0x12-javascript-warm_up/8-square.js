@@ -1,5 +1,5 @@
 #!/usr/bin/node
-const ar = Math.floor(process.argv[2]);
+const ar = Math.floor(+process.argv[2]);
 
 if (isNaN(ar)) {
   console.log('Missing size');
