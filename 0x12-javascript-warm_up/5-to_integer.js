@@ -7,5 +7,5 @@ if (!val) {
 } else if (typeof val === 'string') {
   console.log(`My number: ${parseInt(val)}`);
 } else {
-  console.log(`My number: ${val}`);
+  console.log(`My number: ${Math.floor(val)}`);
 }
