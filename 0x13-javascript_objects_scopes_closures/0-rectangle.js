@@ -1,4 +1,3 @@
 #!/usr/bin/node
 
-class Rectangle {
-}
+exports = new class Rectangle{};
