@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
-import MySQLdb
 from sys import argv
+import MySQLdb
 
 if __name__ == '__main__':
     db = MySQLdb.connect(host="localhost",
@@ -10,11 +10,12 @@ if __name__ == '__main__':
                          passwd=argv[2],
                          db=argv[3])
 
-    cursor = db.cursor()
-    cursor.execute("SELECT * FROM stats ORDER BY ID ASC")
-    rows = cursor.fetchall()
+    curser = db.cursor()
+    curser.execute("SELECT * FROM stats ORDER BY id ASC")
+    rows = curser.fetchall()
 
     for row in rows:
-        print(row)
-    cursor.close()
+        if row[0][1] == 'N':
+            print(row)
+    curser.close()
     db.close()
