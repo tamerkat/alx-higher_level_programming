@@ -15,7 +15,7 @@ if __name__ == '__main__':
     rows = curser.fetchall()
 
     for row in rows:
-        if row[0][1] == 'N':
+        if row[1][0] == 'N':
             print(row)
     curser.close()
     db.close()
