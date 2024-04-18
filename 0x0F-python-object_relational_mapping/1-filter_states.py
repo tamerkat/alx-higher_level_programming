@@ -11,7 +11,7 @@ if __name__ == '__main__':
                          db=argv[3])
 
     curser = db.cursor()
-    curser.execute("SELECT * FROM stats ORDER BY id ASC")
+    curser.execute("SELECT * FROM stats WHERE name LIKE N% ORDER BY id ASC")
     rows = curser.fetchall()
 
     for row in rows:
