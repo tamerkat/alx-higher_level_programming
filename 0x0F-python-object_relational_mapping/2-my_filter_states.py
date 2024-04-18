@@ -1,4 +1,8 @@
 #!/usr/bin/python3
+"""
+return matching states
+parameters given to script: username, password, database, state to match
+"""
 
 import MySQLdb
 from sys import argv
@@ -12,6 +16,7 @@ if __name__ == "__main__":
                          passwd=argv[2],
                          db=argv[3])
 
+    # create cursor to exec queries using SQL; match arg given
     cursor = db.cursor()
     sql_cmd = """SELECT *
                  FROM states
