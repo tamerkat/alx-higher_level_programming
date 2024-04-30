@@ -1,3 +1,3 @@
 #!/bin/bash
-# option
-curl -XI OPTIONS "$1"
+# Print curl size
+curl -sI "$1" | grep "Allow:" | cut -d' ' -f2
