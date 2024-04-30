@@ -1,5 +1,7 @@
 import urllib.request
-
+"""
+    define
+"""
 if __name__ == '__main__':
     with urllib.request.urlopen("https://alx-intranet.hbtn.io/status") as url:
         read = url.read()
