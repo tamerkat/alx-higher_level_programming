@@ -1,3 +1,3 @@
 #!/bin/bash
 # Print curl size
-curl -sI | grep "status_code" | cut -d' ' -f2
+curl -sLIw '%{http_code}' "$1" -o /dev/null
