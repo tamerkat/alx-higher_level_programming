@@ -1,3 +1,3 @@
 #!/bin/bash
 # Print curl size
-curl -sX GET "$1" 
+curl -sL GET "$1" 
