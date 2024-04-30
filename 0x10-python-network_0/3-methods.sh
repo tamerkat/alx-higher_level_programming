@@ -1,3 +1,3 @@
 #!/bin/bash
 # option
-curl -sX OPTIONS "$1"
+curl -sX OPTIONS -i "$1"
